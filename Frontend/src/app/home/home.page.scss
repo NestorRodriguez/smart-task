@@ -1,0 +1,25 @@
+ion-content>div {
+    max-height: 100vh;
+    // background-color: #c0993e;
+}
+
+ion-content>div>ion-card {
+    height: 81vh;
+    margin: 4vh 5vw 0vh 5vw;
+}
+
+ion-content>div>ion-card>img {
+    height: 100%;
+    width: 100%;
+}
+
+ion-content>div>div {
+    text-align: center;
+}
+
+ion-content>div>div>ion-button {
+    height: 7vh;
+    width: 40vw;
+    font-size: 4vw;
+    margin: 4vh 3vw 4vh 3vw;
+}
