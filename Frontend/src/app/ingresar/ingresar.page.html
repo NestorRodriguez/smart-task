@@ -11,21 +11,24 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <div>
+    <form (ngSubmit)="enviarData(formulario)" #formulario="ngForm">
         <div>
-            <ion-item>
-                <ion-input placeholder="Correo" type="email"></ion-input>
-            </ion-item>
+            <div>
+                <ion-item>
+                    <ion-icon name="person"></ion-icon>
+                    <ion-input [(ngModel)]="model.correo" placeholder="Correo" minlength="5" required type="email" name="correo">
+                    </ion-input>
+                </ion-item>
+            </div>
+            <div>
+                <ion-item>
+                    <ion-icon name="key"></ion-icon>
+                    <ion-input [(ngModel)]="model.password" placeholder="Contraseña" minlength="5" required type="password" name="password"></ion-input>
+                </ion-item>
+            </div>
         </div>
-        <div>
-            <ion-item>
-                <ion-input placeholder="Contraseña" type="password"></ion-input>
-            </ion-item>
-        </div>
-    </div>
+        <section>
+            <ion-button type="submit" [disabled]="!formulario.valid">Ingresar</ion-button>
+        </section>
+    </form>
 </ion-content>
-<ion-footer>
-    <section>
-        <ion-button expand="block">Ingresar</ion-button>
-    </section>
-</ion-footer>

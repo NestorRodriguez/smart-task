@@ -12,37 +12,36 @@
 </ion-header>
 
 <ion-content>
-    <div>
+    <form (ngSubmit)="enviarData(formulario)" #formulario="ngForm">
         <div>
-            <ion-item>
-                <ion-input placeholder="Nombre" type="text"></ion-input>
-            </ion-item>
+            <div>
+                <ion-item>
+                    <ion-input [(ngModel)]="model.name" minlength="3" required name="name" placeholder="Nombre" type="text"></ion-input>
+                </ion-item>
+            </div>
+            <div>
+                <ion-item>
+                    <ion-input [(ngModel)]="model.apellido" minlength="3" required name="apellido" placeholder="Apellidos" type="text"></ion-input>
+                </ion-item>
+            </div>
+            <div>
+                <ion-item>
+                    <ion-input [(ngModel)]="model.correo" minlength="5" required name="correo" placeholder="Correo" type="email"></ion-input>
+                </ion-item>
+            </div>
+            <div>
+                <ion-item>
+                    <ion-input [(ngModel)]="model.celular" minlength="9" required name="celular" placeholder="Número de celular" type="number"></ion-input>
+                </ion-item>
+            </div>
+            <div>
+                <ion-item>
+                    <ion-input [(ngModel)]="model.password" minlength="5" required name="password" placeholder="Contraseña" type="password"></ion-input>
+                </ion-item>
+            </div>
         </div>
-        <div>
-            <ion-item>
-                <ion-input placeholder="Apellidos" type="text"></ion-input>
-            </ion-item>
-        </div>
-        <div>
-            <ion-item>
-                <ion-input placeholder="Correo" type="email"></ion-input>
-            </ion-item>
-        </div>
-        <div>
-            <ion-item>
-                <ion-input placeholder="Número de celular" type="number"></ion-input>
-            </ion-item>
-        </div>
-        <div>
-            <ion-item>
-                <ion-input placeholder="Contraseña" type="password"></ion-input>
-            </ion-item>
-        </div>
-    </div>
+        <section>
+            <ion-button type="submit" [disabled]="!formulario.valid">Registrarse</ion-button>
+        </section>
+    </form>
 </ion-content>
-
-<ion-footer>
-    <section>
-        <ion-button expand="block">Registrarse</ion-button>
-    </section>
-</ion-footer>

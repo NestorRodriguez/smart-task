@@ -20,24 +20,34 @@ ion-header>ion-toolbar>ion-buttons>ion-button>ion-icon {
     width: 100%;
 }
 
-ion-content>div {
-    margin: 28.25vh 0vw 0vh 0vw;
+ion-content>form>div {
+    margin: 25vh 0vw 25vh 0vw;
 }
 
-ion-content>div>div {
-    width: 80vw;
-    margin: 5vh 10vw 0vh 10vw;
+ion-content>form>div>div {
+    width: 70vw;
+    margin: 5vh 15vw 0vh 15vw;
 }
 
-ion-content>div>div>ion-item>ion-input {
+ion-content>form>div>div>ion-item>ion-icon {
+    height: 6.5vw;
+    width: 6.5vw;
+}
+
+ion-content>form>div>div>ion-item>ion-input {
     font-size: 5vw;
     height: 8vh;
 }
 
-ion-footer>section>ion-button {
-    height: 9vh;
+ion-content>form>section {
+    text-align: center;
+}
+
+ion-content>form>section>ion-button {
+    height: 8vh;
+    width: 50vw;
     font-size: 5vw;
-    margin: 0vh -2vw 0vh -2vw;
-    --border-radius: 0;
+    margin: 0vh 0vw 0vh 0vw;
+    --border-radius: 5vw 12vh;
     text-transform: none;
 }
