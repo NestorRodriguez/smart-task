@@ -1,0 +1,43 @@
+ion-header>ion-toolbar>ion-title {
+    font-size: 5vw;
+}
+
+ion-header>ion-toolbar {
+    height: 8.5vh;
+}
+
+ion-header>ion-toolbar>ion-buttons {
+    height: 8vh;
+}
+
+ion-header>ion-toolbar>ion-buttons>ion-button {
+    height: 7vh;
+    width: 7vh;
+}
+
+ion-header>ion-toolbar>ion-buttons>ion-button>ion-icon {
+    height: 100%;
+    width: 100%;
+}
+
+ion-content>div {
+    margin: 28.25vh 0vw 0vh 0vw;
+}
+
+ion-content>div>div {
+    width: 80vw;
+    margin: 5vh 10vw 0vh 10vw;
+}
+
+ion-content>div>div>ion-item>ion-input {
+    font-size: 5vw;
+    height: 8vh;
+}
+
+ion-footer>section>ion-button {
+    height: 9vh;
+    font-size: 5vw;
+    margin: 0vh -2vw 0vh -2vw;
+    --border-radius: 0;
+    text-transform: none;
+}
