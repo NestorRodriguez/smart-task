@@ -1,0 +1,53 @@
+ion-header>ion-toolbar>ion-title {
+    font-size: 5vw;
+}
+
+ion-header>ion-toolbar {
+    height: 8.5vh;
+}
+
+ion-header>ion-toolbar>ion-buttons {
+    height: 8vh;
+}
+
+ion-header>ion-toolbar>ion-buttons>ion-button {
+    height: 7vh;
+    width: 7vh;
+}
+
+ion-header>ion-toolbar>ion-buttons>ion-button>ion-icon {
+    height: 100%;
+    width: 100%;
+}
+
+ion-content>form>div {
+    margin: 25vh 0vw 25vh 0vw;
+}
+
+ion-content>form>div>div {
+    width: 70vw;
+    margin: 5vh 15vw 0vh 15vw;
+}
+
+ion-content>form>div>div>ion-item>ion-icon {
+    height: 6.5vw;
+    width: 6.5vw;
+}
+
+ion-content>form>div>div>ion-item>ion-input {
+    font-size: 5vw;
+    height: 8vh;
+}
+
+ion-content>form>section {
+    text-align: center;
+}
+
+ion-content>form>section>ion-button {
+    height: 8vh;
+    width: 50vw;
+    font-size: 5vw;
+    margin: 0vh 0vw 0vh 0vw;
+    --border-radius: 5vw 12vh;
+    text-transform: none;
+}
