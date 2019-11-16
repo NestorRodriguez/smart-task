@@ -1,0 +1,47 @@
+ion-content {
+    text-align: center;
+}
+
+ion-content>ion-toolbar {
+    position: fixed;
+}
+
+ion-content>ion-toolbar>ion-buttons>ion-button {
+    height: 9vh;
+    width: 16vw;
+}
+
+ion-content>ion-toolbar>ion-buttons>ion-button>ion-icon {
+    height: 100%;
+    width: 100%;
+}
+
+ion-content>ion-toolbar>ion-title {
+    margin: 5vh 24vw 1vh 8vw;
+    font-size: 5vw;
+}
+
+ion-content>div>ion-grid {
+    margin-top: 9vh;
+    padding: 0vh 9vw 0vh 9vw;
+}
+
+ion-content>div>ion-grid>ion-row>ion-col>ion-button {
+    width: 35vw;
+    height: 15vh;
+    text-transform: none;
+}
+
+ion-content>div>ion-grid>ion-row>ion-col>ion-button>div>div {
+    height: 4vh;
+    margin: 0vh 0vw 2vh 0vw;
+}
+
+ion-content>div>ion-grid>ion-row>ion-col>ion-button>div>div>ion-icon {
+    height: 100%;
+    width: 100%;
+}
+
+ion-content>div>ion-grid>ion-row>ion-col>ion-button>div>span {
+    font-size: 4vw;
+}

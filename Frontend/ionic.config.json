@@ -1,5 +1,7 @@
 {
   "name": "kmellApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
