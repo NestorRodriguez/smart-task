@@ -2,6 +2,41 @@ ion-content {
     text-align: center;
 }
 
+.my-custom-menu {
+    --width: 74%;
+}
+
+ion-content>ion-menu>ion-content>div {
+    margin: 5vh 0vw 5vh 0vw;
+    text-align: -webkit-center;
+}
+
+ion-content>ion-menu>ion-content>div>span>ion-avatar {
+    border-style: inset;
+    border-color: mediumvioletred;
+    width: 20vw;
+    height: 20vw;
+    margin-bottom: 2vh;
+}
+
+ion-content>ion-menu>ion-content>div>span>ion-label {
+    font-size: 5vw;
+}
+
+ion-content>ion-menu>ion-content>ion-list>ion-item {
+    font-size: 4vw;
+    height: 7.5vh;
+}
+
+ion-content>ion-menu>ion-footer>ion-button {
+    width: 100%;
+    font-size: 5vw;
+    text-transform: none;
+    height: 7vh;
+    --border-radius: 0;
+    margin: 0;
+}
+
 ion-content>ion-toolbar {
     position: fixed;
 }

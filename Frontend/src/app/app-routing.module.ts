@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'ingresar', loadChildren: './ingresar/ingresar.module#IngresarPageModule' },
   { path: 'registrarse', loadChildren: './registrarse/registrarse.module#RegistrarsePageModule' },
   { path: 'menu-principal', loadChildren: './menu-principal/menu-principal.module#MenuPrincipalPageModule' },
+  { path: 'trabajadores/:id', loadChildren: './trabajadores/trabajadores.module#TrabajadoresPageModule' },
 ];
 
 @NgModule({

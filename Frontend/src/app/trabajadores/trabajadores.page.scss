@@ -1,0 +1,40 @@
+ion-header>ion-toolbar>ion-title {
+    font-size: 5vw;
+}
+
+ion-header>ion-toolbar {
+    height: 8.5vh;
+}
+
+ion-header>ion-toolbar>ion-buttons {
+    height: 8vh;
+}
+
+ion-header>ion-toolbar>ion-buttons>ion-button {
+    height: 7vh;
+    width: 7vh;
+}
+
+ion-header>ion-toolbar>ion-buttons>ion-button>ion-icon {
+    height: 100%;
+    width: 100%;
+}
+
+ion-content>ion-list {
+    margin: 3vh 10vw 3vh 5vw;
+}
+
+ion-content>ion-list>ion-item>ion-avatar {
+    border-style: inset;
+    border-color: mediumvioletred;
+    height: 7vh;
+    width: 7vh;
+}
+
+ion-content>ion-list>ion-item>ion-label>h2 {
+    font-size: 4.5vw;
+}
+
+ion-content>ion-list>ion-item>ion-label>h3 {
+    font-size: 3.9vw;
+}

@@ -1,7 +1,35 @@
 <ion-content>
+
+    <ion-menu side="start" menuId="first" content-id="main" class="my-custom-menu">
+        <ion-content>
+            <div>
+                <span>
+                <ion-avatar >
+                    <img src="assets/imagenUsuario.svg">
+                </ion-avatar>
+            </span>
+                <span>
+                <ion-label>
+                    <b>Nombre usuario</b>
+                </ion-label>
+            </span>
+            </div>
+
+            <ion-list>
+                <ion-item>Perfil</ion-item>
+                <ion-item>Sugerencias</ion-item>
+            </ion-list>
+        </ion-content>
+        <ion-footer>
+            <ion-button router-direction="forward" expand="block">Trabaja con nosotros</ion-button>
+        </ion-footer>
+    </ion-menu>
+
+    <ion-router-outlet id="main"></ion-router-outlet>
+
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-button routerLink="/menu-principal" routerDirection="back">
+            <ion-button (click)="openCustom()">
                 <ion-icon slot="icon-only" name="contact"> </ion-icon>
             </ion-button>
         </ion-buttons>
@@ -13,7 +41,7 @@
         <ion-grid>
             <ion-row>
                 <ion-col>
-                    <ion-button>
+                    <ion-button [routerLink]="['/trabajadores/', 1]">
                         <div>
                             <div>
                                 <ion-icon name="Laptop"></ion-icon>
@@ -26,7 +54,7 @@
                 </ion-col>
 
                 <ion-col>
-                    <ion-button>
+                    <ion-button [routerLink]="['/trabajadores/', 2]">
                         <div>
                             <div>
                                 <ion-icon name="hammer"></ion-icon>
@@ -40,7 +68,7 @@
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-button>
+                    <ion-button [routerLink]="['/trabajadores/', 3]">
                         <div>
                             <div>
                                 <ion-icon name="rose"></ion-icon>
@@ -53,7 +81,7 @@
                 </ion-col>
 
                 <ion-col>
-                    <ion-button>
+                    <ion-button [routerLink]="['/trabajadores/', 4]">
                         <div>
                             <div>
                                 <ion-icon name="home"></ion-icon>
@@ -67,7 +95,7 @@
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-button>
+                    <ion-button [routerLink]="['/trabajadores/', 5]">
                         <div>
                             <div>
                                 <ion-icon name="flash"></ion-icon>
@@ -80,13 +108,13 @@
                 </ion-col>
 
                 <ion-col>
-                    <ion-button>
+                    <ion-button [routerLink]="['/trabajadores/', 6]">
                         <div>
                             <div>
                                 <ion-icon name="tv"></ion-icon>
                             </div>
                             <span>
-                                <b>Electronicos</b>
+                                <b>Electrónicos</b>
                             </span>
                         </div>
                     </ion-button>
@@ -94,7 +122,7 @@
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-button>
+                    <ion-button [routerLink]="['/trabajadores/', 7]">
                         <div>
                             <div>
                                 <ion-icon name="water"></ion-icon>
@@ -107,7 +135,7 @@
                 </ion-col>
 
                 <ion-col>
-                    <ion-button>
+                    <ion-button [routerLink]="['/trabajadores/', 8]">
                         <div>
                             <div>
                                 <ion-icon name="key"></ion-icon>
@@ -121,20 +149,20 @@
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-button>
+                    <ion-button [routerLink]="['/trabajadores/', 9]">
                         <div>
                             <div>
                                 <ion-icon name="logo-model-s"></ion-icon>
                             </div>
                             <span>
-                                <b>Mecanicos</b>
+                                <b>Mecánicos</b>
                             </span>
                         </div>
                     </ion-button>
                 </ion-col>
 
                 <ion-col>
-                    <ion-button>
+                    <ion-button [routerLink]="['/trabajadores/', 10]">
                         <div>
                             <div>
                                 <ion-icon name="color-palette"></ion-icon>
