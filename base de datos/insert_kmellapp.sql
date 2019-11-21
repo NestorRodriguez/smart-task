@@ -8,11 +8,11 @@ INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (2, 'C
 INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (3, 'Jardineros');
 INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (4, 'Albañiles');
 INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (5, 'Electricista');
-INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (6, 'Electronicos');
+INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (6, 'Electrónicos');
 INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (7, 'Plomero');
 INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (8, 'Cerrajeros');
-INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (9, 'Mecanicos');
-INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (10, 'pintores');
+INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (9, 'Mecánicos');
+INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (10, 'Pintores');
 
 
 INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 

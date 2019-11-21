@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button routerLink="/menu-principal" routerDirection="back">
+                <ion-icon slot="icon-only" name="arrow-round-back"> </ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>
+            Quieres trabajar con nosotros?
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form (ngSubmit)="enviarData(formulario)" #formulario="ngForm">
+        <div>
+            <div>
+                <ion-item>
+                    <ion-label><b>N° Documento:</b>
+                    </ion-label>
+                    <ion-input [(ngModel)]="model.document" minlength="5" required name="document" type="number"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label><b>Profesión:</b></ion-label>
+                    <ion-select>
+                        <ion-select-option>electrico</ion-select-option>
+                        <ion-select-option>plomero</ion-select-option>
+                        <ion-select-option>cerrajero</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item lines="">
+                    <div>
+                        <ion-label><b>Fotografía:</b></ion-label>
+                    </div>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="4" *ngIf="model.foto">
+                                <ion-button size="small" shape="round">
+                                    <ion-icon slot="icon-only" name="checkmark"></ion-icon>
+                                </ion-button>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <ion-button size="small" shape="round" expand="block" (click)="loadCamera()">
+                                    <ion-icon slot="icon-only" name="camera"></ion-icon>
+                                </ion-button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-item>
+            </div>
+            <section>
+                <ion-button type="submit" routerLink="/menu-principal" [disabled]="!formulario.valid">Registrarse</ion-button>
+            </section>
+        </div>
+    </form>
+</ion-content>
