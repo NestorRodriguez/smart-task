@@ -1,0 +1,7 @@
+[2019-11-28T20:41:26.823] [ERROR] trappsporte - [action: validation][msg: la descripción de la calificación es requerida][line:17:D:\ProyectosIonic\KmellApps\Backend\app\utils\validator.js]
+[2019-11-28T20:41:47.316] [ERROR] trappsporte - [action: validation][msg: la descripción de la calificación es requerida][line:17:D:\ProyectosIonic\KmellApps\Backend\app\utils\validator.js]
+[2019-11-28T20:42:51.495] [ERROR] trappsporte - [action: validation][msg: la descripción de la calificación es requerida][line:17:D:\ProyectosIonic\KmellApps\Backend\app\utils\validator.js]
+[2019-11-28T20:44:13.982] [ERROR] trappsporte - [action: validation][msg: la descripción de la calificación es requerida][line:17:D:\ProyectosIonic\KmellApps\Backend\app\utils\validator.js]
+[2019-11-28T20:44:47.387] [ERROR] trappsporte - [action: validation][msg: la descripción de la calificación es requerida][line:17:D:\ProyectosIonic\KmellApps\Backend\app\utils\validator.js]
+[2019-11-28T22:57:41.007] [ERROR] trappsporte - [action: validation][msg: la descripción del estado de solicitud es requerida][line:17:D:\ProyectosIonic\KmellApps\Backend\app\utils\validator.js]
+[2019-11-28T22:58:19.464] [ERROR] trappsporte - [action: validation][msg: la descripción del estado de solicitud es requerida][line:17:D:\ProyectosIonic\KmellApps\Backend\app\utils\validator.js]
