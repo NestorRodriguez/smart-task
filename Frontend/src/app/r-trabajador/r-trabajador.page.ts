@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {Camera, CameraOptions} from '@ionic-native/camera/ngx';
+import { KmellappService } from '../services/kmellapp.service';
 
 
 @Component({
@@ -12,17 +13,23 @@ import {Camera, CameraOptions} from '@ionic-native/camera/ngx';
 export class RTrabajadorPage implements OnInit {
 
   model: any = {};
-
+  profesiones: any[] = [];
   //constructor() { }
-  constructor(private camera: Camera) { }
+  constructor(private camera: Camera,
+              private service: KmellappService) { }
 
   ngOnInit() {
-    this.model ={
+    this.model = {
       document: null,
       foto : null,
       // foto : 'assets/kmellapp.jpg',
       profesion : null,
     }
+
+    this.service.getQuery('profesion').subscribe( data => {
+      this.profesiones = data;
+      console.log('data del servicio', data);
+    });
   }
   public enviarData( formulario: NgForm ) {
     if (formulario.valid) {
