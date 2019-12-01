@@ -15,26 +15,26 @@ INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (9, 'M
 INSERT INTO `kmellapp`.`profesion` (`id`, `descripcion_ocupacion`) VALUES (10, 'pintores');
 
 
-INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 
-VALUES (1, 'David', 'Reyes', 'setecsa307@gmail.com', 51663717, '12345', 2, 6);
-INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 
-VALUES (2, 'Juan', 'Herrera', 'juan.herrera@hotmail.com', 1916040458, '1234', 1, 3);
-INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 
-VALUES (3, 'Camilo', 'Ardila', 'camilo.ardila@gmail.com', 1916040458, '2341', 2, 10);
-INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 
-VALUES (4, 'Gonzalo', 'Torres', 'gonzalo.torres@hotmail.com', 1916040458, '5367', 3, 9);
-INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 
-VALUES (5, 'Mercedes', 'Martinez', 'mercedes.martinez@gmail.com', 1012435678, '6531', 2, 1);
-INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 
-VALUES (6, 'Carolina', 'Fajardo', 'carolina.fajardo@hotmail.com', 41342788, '9786', 3, 5);
-INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 
-VALUES (7, 'Aura', 'Vargas', 'aura.vargas@gmail.com', 78543976, '3657', 2, 2);
-INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 
-VALUES (8, 'Mauricio', 'Baron', 'mauricio.baron@hotmail.com', 10123654, '8766', 2, 7);
-INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 
-VALUES (9, 'Barbara', 'Santos', 'barbara.santos@gmail.com', 1011234654, '34564', 3, 4);
-INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `documento`, `contraseña`, `rol_id`, `profesion_id`) 
-VALUES (10, 'Alexandra', 'Montero', 'alexandra.montero@hotmail.com', 1102354765, '25367', 3, 8);
+INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `celular`, `contrasena`, `rol_id`, `documento`, `profesion_id`) 
+VALUES (1, 'David', 'Reyes', 'setecsa307@gmail.com', 3044449780, '12345', 2, 51663717, 6);
+INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `celular`, `contrasena`, `rol_id`, `documento`, `profesion_id`) 
+VALUES (2, 'Juan', 'Herrera', 'juan.herrera@hotmail.com', 3044449780, '12345', 2, 51663717, 4);
+INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `celular`, `contrasena`, `rol_id`, `documento`, `profesion_id`) 
+VALUES (3, 'Camilo', 'Ardila', 'camilo.ardila@gmail.com', 3044449780, '12345', 2, 51663717, 3);
+INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `celular`, `contrasena`, `rol_id`, `documento`, `profesion_id`) 
+VALUES (4, 'Gonzalo', 'Torres', 'gonzalo.torres@hotmail.com', 3044449780, '12345', 2, 51663717, 2);
+INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `celular`, `contrasena`, `rol_id`, `documento`, `profesion_id`) 
+VALUES (5, 'Mercedes', 'Martinez', 'mercedes.martinez@gmail.com', 3044449780, '12345', 2, 51663717, 1);
+INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `celular`, `contrasena`, `rol_id`, `documento`, `profesion_id`) 
+VALUES (6, 'Carolina', 'Fajardo', 'carolina.fajardo@hotmail.com', 3044449780, '12345', 2, 51663717, 8);
+INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `celular`, `contrasena`, `rol_id`, `documento`, `profesion_id`) 
+VALUES (7, 'Aura', 'Vargas', 'aura.vargas@gmail.com', 3044449780, '12345', 2, 51663717, 9);
+INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `celular`, `contrasena`, `rol_id`, `documento`, `profesion_id`) 
+VALUES (8, 'Mauricio', 'Baron', 'mauricio.baron@hotmail.com', 3044449780, '12345', 2, 51663717, 10);
+INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `celular`, `contrasena`, `rol_id`, `documento`, `profesion_id`) 
+VALUES (9, 'Barbara', 'Santos', 'barbara.santos@gmail.com', 3044449780, '12345', 2, 51663717, 5);
+INSERT INTO `kmellapp`.`usuarios` (`id`, `nombres`, `apellidos`, `email`, `celular`, `contrasena`, `rol_id`, `documento`, `profesion_id`) 
+VALUES (10, 'Alexandra', 'Montero', 'alexandra.montero@hotmail.com', 3044449780, '12345', 2, 51663717, 7);
 
 
 INSERT INTO `kmellapp`.`servicios` (`id`, `descripcion_servicio`) VALUES (1, 'Arreglar Computador');
