@@ -4,7 +4,7 @@
  */
 
 const Controller = require('./controller');
-const Service = require('../usuarios');
+const Service = require('../services/usuarios');
 
 class usuariosController extends Controller {
 

@@ -7,13 +7,19 @@ import { catchError, tap, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class KmellappService {
-  serverUrl = 'http://localhost:3000';
+  serverUrl = 'http://localhost:3000/api/v1.0';
   almacenamiento: any;
 
   constructor( private http: HttpClient) { }
 
-  getProfesion(id: string) {
-    return this.http.get<any[]>(`${this.serverUrl}/profesion/${id}`).pipe(
+  getQuery(ruta: string) {
+    return this.http.get<any[]>(`${this.serverUrl}/${ruta}`).pipe(
+      tap(data => console.log(JSON.stringify(data))),
+      catchError(this.handleError)
+      );
+  }
+  getQueryParam(ruta: string, id: string) {
+    return this.http.get<any[]>(`${this.serverUrl}/${ruta}/${id}`).pipe(
       tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
       );

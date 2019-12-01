@@ -23,8 +23,10 @@
 
                 <ion-item>
                     <ion-label><b>Profesión:</b></ion-label>
-                    <ion-select (ionChange)="seleccion($event)">
-                        <ion-select-option value="{{profesion.id}}" *ngFor="let profesion of services">{{profesion.profesion}}</ion-select-option>
+                    <ion-select (ionChange)="seleccion($event)" [(ngModel)]="model.profesion" name="profesion">
+                        <span *ngFor="let profesion of profesiones">
+                        <ion-select-option value="{{profesion.id}}">{{profesion.descripcionOcupacion}}</ion-select-option>
+                    </span>
                     </ion-select>
                 </ion-item>
                 <ion-item lines="">
