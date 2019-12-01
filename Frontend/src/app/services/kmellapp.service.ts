@@ -18,13 +18,11 @@ export class KmellappService {
       catchError(this.handleError)
       );
   }
-  
 
   recibirDatos(datos: any) {
     this.almacenamiento = datos;
     console.log('recibir', this.almacenamiento);
   }
-  
 enviarDatos() {
   return this.almacenamiento;
 }
