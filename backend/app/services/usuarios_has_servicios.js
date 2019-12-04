@@ -12,13 +12,13 @@ class usuariosHasServiciosService extends Service {
     constructor() {
         const modelOptions = {
             all: {
-                attributes: ["usuarios_id", "usuarios_rol_id", "servicios_id", "imagen_servicio"]
+                attributes: ["usuarios_id", "usuarios_rol_id", "servicios_id"]
             },
             one: {
-                attributes: ["usuarios_id", "usuarios_rol_id", "servicios_id", "imagen_servicio"]
+                attributes: ["usuarios_id", "usuarios_rol_id", "servicios_id"]
             },
             create: {
-                attributes: ["usuarios_id", "usuarios_rol_id", "servicios_id", "imagen_servicio"]
+                attributes: ["usuarios_id", "usuarios_rol_id", "servicios_id"]
             },
         };
         super(Model, modelOptions);

@@ -82,16 +82,16 @@ module.exports = (sequelize, DataTypes) => sequelize.define('usuarios', {
             }
         }
     },
-    contraseña: {
+    contrasena: {
         type: DataTypes.STRING(20),
         allowNull: false,
         validate: {
             notNull: {
-                msg: 'la descripción de la contraseña de usuarios es requerida'
+                msg: 'la descripción de la contrasena de usuarios es requerida'
             },
             customValidator(value) {
                 if (!value) {
-                    throw new Error("la descripción de la contraseña de usuarios no debe estar vacía");
+                    throw new Error("la descripción de la contrasena de usuarios no debe estar vacía");
                 }
             }
         }
