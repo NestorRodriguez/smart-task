@@ -5,7 +5,7 @@
 
 const express = require('express');
 const router = express.Router();
-const Controller = require('../../controllers/solicitud_servicio');
+const Controller = require('../../controllers/usuarios_has_servicios');
 const Routing = require('../routing');
 const routing = Routing(new Controller());
 const Auth = require('../../middlewares/auth');

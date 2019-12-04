@@ -12,7 +12,7 @@ class solicitudServicioService extends Service {
     constructor() {
         const modelOptions = {
             all: {
-                attributes: ["id", "descripcionSolicitudServicio", "fechaSolicitud", "lugarSolicitud", "telefono", "calificacionId", "estadoSolicitudId", "usuariosId", "usuarioSolicitaServicio", "serviciosId"]
+                attributes: ["id", "descripcion_solicitud_servicio", "fecha_solicitud", "lugar_solicitud", "telefono", "calificacion_id", "estado_solicitud_id", "usuarios_id", "usuario_solicita_servicio", "servicios_id"]
             },
             one: {
                 attributes: ["id", "descripcion_solicitud_servicio", "fecha_solicitud", "lugar_solicitud", "telefono", "calificacion_id", "estado_solicitud_id", "usuarios_id", "usuario_solicita_servicio", "servicios_id"]
