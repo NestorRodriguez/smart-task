@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { KmellappService } from '../services/kmellapp.service';
 
 @Component({
   selector: 'app-registrarse',
@@ -8,21 +9,29 @@ import { NgForm } from '@angular/forms';
 })
 export class RegistrarsePage implements OnInit {
 
-  constructor() { }
+  constructor( private service: KmellappService ) { }
 
   model: any = {};
   ngOnInit() {
     this.model = {
-      name : null,
-      apellido : null,
-      correo : null,
+      nombres : null,
+      apellidos : null,
+      email : null,
       celular : null,
-      password : null,
+      contrasena : null,
+      rol_id: 2,
+      documento: null,
+      profesion_id: 1,
+      foto: null,
+      createdAt: null,
+      updatedAt: null
     };
   }
   public enviarData( formulario: NgForm ) {
     if (formulario.valid) {
-       console.log(formulario);
+       this.service.postData('usuarios', this.model).subscribe( res => {
+         console.log('Respuesta', res);
+       });
     }
 }
 public evento(evento:Event) {

@@ -29,6 +29,15 @@ export class KmellappService {
     this.almacenamiento = datos;
     console.log('recibir', this.almacenamiento);
   }
+
+  postData(ruta: string, body: any) {
+    console.log('body', body);
+    return this.http.post<any[]>(`${this.serverUrl}/${ruta}`, body).pipe(
+    tap(data => console.log(JSON.stringify(data))),
+    catchError(this.handleError)
+    );
+  }
+
 enviarDatos() {
   return this.almacenamiento;
 }

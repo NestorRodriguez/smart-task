@@ -64,34 +64,34 @@ module.exports = (sequelize, DataTypes) => sequelize.define('usuarios', {
             }
         }
     },
-    documento: {
+    celular: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
             notNull: {
-                msg: 'la descripción del documento de usuarios es requerida'
+                msg: 'la descripción del celular de usuarios es requerida'
             },
             len: {
                 args: [5, 20],
-                msg: "la descripción del documento de usuarios debe tener minimo 5 y máximo 20 caracteres"
+                msg: "la descripción del celular de usuarios debe tener minimo 5 y máximo 20 caracteres"
             },
             customValidator(value) {
                 if (!value) {
-                    throw new Error("la descripción del documento de usuarios no debe estar vacía");
+                    throw new Error("la descripción del celular de usuarios no debe estar vacía");
                 }
             }
         }
     },
-    contraseña: {
+    contrasena: {
         type: DataTypes.STRING(20),
         allowNull: false,
         validate: {
             notNull: {
-                msg: 'la descripción de la contraseña de usuarios es requerida'
+                msg: 'la descripción de la contrasena de usuarios es requerida'
             },
             customValidator(value) {
                 if (!value) {
-                    throw new Error("la descripción de la contraseña de usuarios no debe estar vacía");
+                    throw new Error("la descripción de la contrasena de usuarios no debe estar vacía");
                 }
             }
         }
@@ -101,10 +101,18 @@ module.exports = (sequelize, DataTypes) => sequelize.define('usuarios', {
         allowNull: false,
         primaryKey: true,
     },
+    documento: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
     profesion_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
         primaryKey: true,
+    },
+    foto: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
     },
     underscored: true,
     timestamps: false,

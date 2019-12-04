@@ -50,9 +50,9 @@ module.exports = (sequelize, DataTypes) => sequelize.define('users', {
                     throw new Error("correo electrónico no debe estar vacío");
                 }
             },
-            isUnique: function (email, next) {
+            isUnique: function(email, next) {
                 const self = this;
-                return Validator.isUnique('../models/user.js', self, next, {email}, 'correo electrónico está asociado a otro usuario');
+                return Validator.isUnique('../models/user.js', self, next, { email }, 'correo electrónico está asociado a otro usuario');
             }
         }
     },
@@ -72,9 +72,9 @@ module.exports = (sequelize, DataTypes) => sequelize.define('users', {
                     throw new Error("usuario no debe estar vacío");
                 }
             },
-            isUnique: function (username, next) {
+            isUnique: function(username, next) {
                 const self = this;
-                return Validator.isUnique('../models/user.js', self, next, {username}, 'nombre de usuario está asociado a otro usuario');
+                return Validator.isUnique('../models/user.js', self, next, { username }, 'nombre de usuario está asociado a otro usuario');
             }
         },
         unique: {
