@@ -11,24 +11,24 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <form (ngSubmit)="enviarData(formulario)" #formulario="ngForm">
+    <form (ngSubmit)="login(forma)" #forma="ngForm">
         <div>
             <div>
                 <ion-item>
                     <ion-icon name="person"></ion-icon>
-                    <ion-input [(ngModel)]="model.correo" placeholder="Correo" minlength="5" required type="email" name="correo">
+                    <ion-input type="text" required ngModel #email="ngModel" name="email" placeholder="Correo" maxLength="200" minLength="3">
                     </ion-input>
                 </ion-item>
             </div>
             <div>
                 <ion-item>
                     <ion-icon name="key"></ion-icon>
-                    <ion-input [(ngModel)]="model.password" placeholder="Contraseña" minlength="5" required type="password" name="password"></ion-input>
+                    <ion-input type="password" required ngModel #clave="ngModel" name="clave" placeholder="Contraseña" maxLength="200" minLength="3"></ion-input>
                 </ion-item>
             </div>
         </div>
         <section>
-            <ion-button type="submit" routerLink="/menu-principal" [disabled]="!formulario.valid">Ingresar</ion-button>
+            <ion-button type="submit" [disabled]="!forma.valid">Ingresar</ion-button>
         </section>
     </form>
 </ion-content>
