@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { NavController, LoadingController, ToastController } from '@ionic/angular';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-import { LoginService } from '../Services/login/login.service';
+import { LoginService } from '../services/login/login.service';
 //import { UserModel } from '../models/user-model';
 
 @Component({
