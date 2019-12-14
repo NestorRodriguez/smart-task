@@ -9,10 +9,10 @@ module.exports = {
     sessionTime: 3, // Definicion en horas de sesión
     appPath: path.dirname(__dirname),
     db: {
-        user: "root",
-        access: "12345",
+        user: "kmellapp@kmellappdb",
+        access: "}?Be*G/9,9DYLycp",
         database: "kmellapp",
-        host: "127.0.0.1",
+        host: "kmellappdb.mysql.database.azure.com",
         port: "3306",
         dialect: 'mysql',
         pool: {
