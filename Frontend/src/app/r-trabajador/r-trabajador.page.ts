@@ -25,8 +25,8 @@ export class RTrabajadorPage implements OnInit {
       rol_id: 3,
       documento: null,
       profesion_id: null,
-      // foto: null
-      foto : 'assets/Kmellapp.jpg'
+      foto: null
+      // foto : 'assets/Kmellapp.jpg'
     }
     this.storage.get('userlogged').then( data => {
       this.usuario = data;
