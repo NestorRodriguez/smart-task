@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { KmellappService } from '../services/kmellapp.service';
+import {ToastController} from '@ionic/angular';
 
 @Component({
   selector: 'app-registrarse',
@@ -9,7 +10,8 @@ import { KmellappService } from '../services/kmellapp.service';
 })
 export class RegistrarsePage implements OnInit {
 
-  constructor( private service: KmellappService ) { }
+  constructor(  private toastCtrl: ToastController,
+                private service: KmellappService ) { }
 
   model: any = {};
   ngOnInit() {
@@ -27,11 +29,16 @@ export class RegistrarsePage implements OnInit {
       updatedAt: null
     };
   }
-  public enviarData( formulario: NgForm ) {
+  public async enviarData( formulario: NgForm ) {
     if (formulario.valid) {
-       this.service.postData('usuarios', this.model).subscribe( res => {
-         console.log('Respuesta', res);
+       this.service.postData('usuarios', this.model).subscribe( async (res) => {
+        const toast = await this.toastCtrl.create({
+          message: 'Registro exitoso',
+          duration: 1800
        });
+       await toast.present();
+       console.log('Respuesta', res);
+       })
     }
 }
 public evento(evento:Event) {

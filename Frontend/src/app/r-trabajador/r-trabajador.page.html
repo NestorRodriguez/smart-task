@@ -18,12 +18,12 @@
                 <ion-item>
                     <ion-label><b>N° Documento:</b>
                     </ion-label>
-                    <ion-input [(ngModel)]="model.document" minlength="5" required name="document" type="number"></ion-input>
+                    <ion-input [(ngModel)]="model.documento" minlength="5" required name="documento" type="number"></ion-input>
                 </ion-item>
 
                 <ion-item>
                     <ion-label><b>Profesión:</b></ion-label>
-                    <ion-select (ionChange)="seleccion($event)" [(ngModel)]="model.profesion" name="profesion">
+                    <ion-select (ionChange)="seleccion($event)" [(ngModel)]="model.profesion_id" name="profesion_id">
                         <span *ngFor="let profesion of profesiones">
                         <ion-select-option value="{{profesion.id}}">{{profesion.descripcionOcupacion}}</ion-select-option>
                     </span>

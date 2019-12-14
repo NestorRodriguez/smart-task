@@ -8,6 +8,8 @@ import { catchError, tap, map } from 'rxjs/operators';
 })
 export class KmellappService {
   serverUrl = 'http://localhost:3000/api/v1.0';
+  // serverUrl = 'http://192.168.0.26:3000/api/v1.0';
+
   almacenamiento: any;
 
   constructor( private http: HttpClient) { }
@@ -37,6 +39,15 @@ export class KmellappService {
     catchError(this.handleError)
     );
   }
+  putData(ruta: string, body: any) {
+    console.log('body', body);
+    return this.http.put<any[]>(`${this.serverUrl}/${ruta}`, body).pipe(
+    tap(data => console.log(JSON.stringify(data))),
+    catchError(this.handleError)
+    );
+  }
+
+ 
 
 enviarDatos() {
   return this.almacenamiento;

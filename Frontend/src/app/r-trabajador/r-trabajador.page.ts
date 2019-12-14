@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {Camera, CameraOptions} from '@ionic-native/camera/ngx';
 import { KmellappService } from '../services/kmellapp.service';
+import { Storage } from '@ionic/storage';
 
 
 @Component({
@@ -11,29 +12,36 @@ import { KmellappService } from '../services/kmellapp.service';
 })
 
 export class RTrabajadorPage implements OnInit {
-
+  usuario: any;
   model: any = {};
   profesiones: any[] = [];
-  //constructor() { }
+
   constructor(private camera: Camera,
-              private service: KmellappService) { }
+              private service: KmellappService,
+              public storage: Storage) { }
 
   ngOnInit() {
     this.model = {
-      document: null,
-      foto : null,
-      // foto : 'assets/kmellapp.jpg',
-      profesion : null,
+      rol_id: 3,
+      documento: null,
+      profesion_id: null,
+      // foto: null
+      foto : 'assets/Kmellapp.jpg'
     }
-
+    this.storage.get('userlogged').then( data => {
+      this.usuario = data;
+      console.log('usuario recuperado', this.usuario);
+    });
     this.service.getQuery('profesion').subscribe( data => {
       this.profesiones = data;
-      console.log('data del servicio', data);
     });
+
   }
   public enviarData( formulario: NgForm ) {
     if (formulario.valid) {
-       console.log(formulario);
+      this.service.putData(`/usuarios/${this.usuario.id}`, this.model).subscribe( data => {
+        console.log(data);
+      })
     }
 }
 public evento(evento:Event) {
@@ -41,7 +49,7 @@ public evento(evento:Event) {
 }
 
 async loadCamera() {
-  const options = {
+    const options = {
     quality: 25,
     destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.JPEG,
@@ -49,6 +57,6 @@ async loadCamera() {
     correctOrientation: true,
     cameraDirection: this.camera.Direction.BACK,
   };
-  this.model.imagen = 'data:image/jpeg;base64,' + await this.camera.getPicture(options);
+  this.model.foto = 'data:image/jpeg;base64,' + await this.camera.getPicture(options);
 }
 }

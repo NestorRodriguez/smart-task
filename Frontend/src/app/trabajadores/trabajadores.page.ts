@@ -33,7 +33,4 @@ export class TrabajadoresPage implements OnInit {
     }
     }, error => this.errorMessage = error);
   }
-
- 
-
 }

@@ -4,13 +4,16 @@
         <ion-content>
             <div>
                 <span>
-                <ion-avatar >
+                <ion-avatar *ngIf="usuarios.foto === null">
                     <img src="assets/imagenUsuario.svg">
+                </ion-avatar>
+                <ion-avatar *ngIf="usuarios.foto !== null">
+                    <img [src]="usuarios.foto" />
                 </ion-avatar>
             </span>
                 <span>
                 <ion-label>
-                    <b>Nombre usuario</b>
+                    <b>{{usuarios.nombres}}<br>{{usuarios.apellidos}}</b>
                 </ion-label>
             </span>
             </div>
