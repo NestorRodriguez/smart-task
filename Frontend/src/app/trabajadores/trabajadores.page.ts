@@ -26,7 +26,7 @@ export class TrabajadoresPage implements OnInit {
     this.id = parseInt(this.activedRoute.snapshot.paramMap.get('id'));
     this.service.getQuery('usuarios').subscribe( (listaTrabajadores: any) => {
       for ( const trabajador of listaTrabajadores  ) {
-        console.log('trabajador' , trabajador);
+        // console.log('trabajador' , trabajador);
         if (trabajador.profesion_id === this.id && trabajador.rol_id === 3 ) {
           this.trabajadores.push(trabajador);
       }

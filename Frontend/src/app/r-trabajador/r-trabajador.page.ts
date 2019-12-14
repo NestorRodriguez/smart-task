@@ -30,7 +30,6 @@ export class RTrabajadorPage implements OnInit {
     }
     this.storage.get('userlogged').then( data => {
       this.usuario = data;
-      console.log('usuario recuperado', this.usuario);
     });
     this.service.getQuery('profesion').subscribe( data => {
       this.profesiones = data;
@@ -39,13 +38,11 @@ export class RTrabajadorPage implements OnInit {
   }
   public enviarData( formulario: NgForm ) {
     if (formulario.valid) {
-      this.service.putData(`/usuarios/${this.usuario.id}`, this.model).subscribe( data => {
-        console.log(data);
-      })
+      this.service.putData(`/usuarios/${this.usuario.id}`, this.model).subscribe( data => { })
     }
 }
 public evento(evento:Event) {
-  console.log(evento);
+  // console.log(evento);
 }
 
 async loadCamera() {

@@ -63,7 +63,7 @@ export class IngresarPage implements OnInit {
                     loginValid = true;
                     delete value.contrasena;
                     this.storage.set('userlogged', value);
-                    console.log('data del usuario', value);
+                    // console.log('data del usuario', value);
 
                   }
                 });

@@ -27,10 +27,8 @@ export class MenuPrincipalPage implements OnInit {
       this.perfil = data;
       this.service.getQuery(`/usuarios/${this.perfil.id}`).subscribe( usuario => {
         this.usuarios = usuario;
-        console.log('esto es lo que trae', this.usuarios);
-        console.log('data del servicio', data);
+        console.log('data del servicio');
       });
-      console.log('Perfil recuperado', this.perfil);
     });
   }
 

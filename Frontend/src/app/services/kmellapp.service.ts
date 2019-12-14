@@ -16,13 +16,13 @@ export class KmellappService {
 
   getQuery(ruta: string) {
     return this.http.get<any[]>(`${this.serverUrl}/${ruta}`).pipe(
-      tap(data => console.log(JSON.stringify(data))),
+      tap(data => console.log('data')),
       catchError(this.handleError)
       );
   }
   getQueryParam(ruta: string, id: string) {
     return this.http.get<any[]>(`${this.serverUrl}/${ruta}/${id}`).pipe(
-      tap(data => console.log(JSON.stringify(data))),
+      tap(data => console.log('data')),
       catchError(this.handleError)
       );
   }
@@ -35,14 +35,14 @@ export class KmellappService {
   postData(ruta: string, body: any) {
     console.log('body', body);
     return this.http.post<any[]>(`${this.serverUrl}/${ruta}`, body).pipe(
-    tap(data => console.log(JSON.stringify(data))),
+    tap(data => console.log('data')),
     catchError(this.handleError)
     );
   }
   putData(ruta: string, body: any) {
     console.log('body', body);
     return this.http.put<any[]>(`${this.serverUrl}/${ruta}`, body).pipe(
-    tap(data => console.log(JSON.stringify(data))),
+    tap(data => console.log('data')),
     catchError(this.handleError)
     );
   }

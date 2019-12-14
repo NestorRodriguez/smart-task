@@ -21,9 +21,9 @@ export class RegistrarsePage implements OnInit {
       email : null,
       celular : null,
       contrasena : null,
-      rol_id: 2,
+      rol_id: '2',
       documento: null,
-      profesion_id: 1,
+      profesion_id: '1',
       foto: null,
       createdAt: null,
       updatedAt: null
@@ -31,17 +31,18 @@ export class RegistrarsePage implements OnInit {
   }
   public async enviarData( formulario: NgForm ) {
     if (formulario.valid) {
-       this.service.postData('usuarios', this.model).subscribe( async (res) => {
+      this.model.celular = this.model.celular.toString();
+      this.model.contrasena = this.model.contrasena.toString();
+      this.service.postData('usuarios', this.model).subscribe( async (res) => {
         const toast = await this.toastCtrl.create({
           message: 'Registro exitoso',
           duration: 1800
        });
        await toast.present();
-       console.log('Respuesta', res);
        })
     }
 }
 public evento(evento:Event) {
-  console.log(evento);
+  // console.log(evento);
 }
 }
