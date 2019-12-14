@@ -13,7 +13,7 @@ module.exports = {
         access: "}?Be*G/9,9DYLycp",
         database: "kmellapp",
         host: "kmellappdb.mysql.database.azure.com",
-        port: "3306",
+        port: "8889",
         dialect: 'mysql',
         pool: {
             max: 5,
