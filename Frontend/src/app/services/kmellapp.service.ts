@@ -7,7 +7,7 @@ import { catchError, tap, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class KmellappService {
-  serverUrl = 'http://localhost:3000/api/v1.0';
+  serverUrl = 'https://kmellap.azurewebsites.net/api/v1.0';
   // serverUrl = 'http://192.168.0.26:3000/api/v1.0';
 
   almacenamiento: any;
