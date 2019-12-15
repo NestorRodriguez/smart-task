@@ -40,7 +40,7 @@ export class KmellappService {
     );
   }
   putData(ruta: string, body: any) {
-    console.log('body', body);
+    console.log('body');
     return this.http.put<any[]>(`${this.serverUrl}/${ruta}`, body).pipe(
     tap(data => console.log('data')),
     catchError(this.handleError)
